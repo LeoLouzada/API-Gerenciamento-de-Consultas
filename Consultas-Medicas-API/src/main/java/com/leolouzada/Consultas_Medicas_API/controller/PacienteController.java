@@ -34,13 +34,13 @@ public class PacienteController {
 	}
 
 	@PostMapping
-	public ResponseEntity<PacienteDto> create(@RequestBody PacienteDto pacienteDTO) {
-		return ResponseEntity.ok(pacienteService.create(pacienteDTO));
+	public ResponseEntity<PacienteDto> create(@RequestBody PacienteDto pacienteDto) {
+		return ResponseEntity.ok(pacienteService.create(pacienteDto));
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<PacienteDto> update(@PathVariable Long id, @RequestBody PacienteDto pacienteDTO) {
-		return ResponseEntity.ok(pacienteService.update(id, pacienteDTO));
+	public ResponseEntity<PacienteDto> update(@PathVariable Long id, @RequestBody PacienteDto pacienteDto) {
+		return ResponseEntity.ok(pacienteService.update(id, pacienteDto));
 	}
 
 	@DeleteMapping("/{id}")

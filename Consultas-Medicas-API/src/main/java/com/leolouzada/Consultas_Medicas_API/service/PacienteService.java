@@ -9,9 +9,9 @@ public interface PacienteService {
 
 	PacienteDto findById(Long id);
 
-	PacienteDto create(PacienteDto pacienteDTO);
+	PacienteDto create(PacienteDto pacienteDto);
 
-	PacienteDto update(Long id, PacienteDto pacienteDTO);
+	PacienteDto update(Long id, PacienteDto pacienteDto);
 
 	void delete(Long id);
 }

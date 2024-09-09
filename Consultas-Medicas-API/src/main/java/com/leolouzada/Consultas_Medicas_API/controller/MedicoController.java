@@ -36,15 +36,15 @@ public class MedicoController {
 	}
 
 	@PostMapping
-	public ResponseEntity<MedicoDto> createMedico(@RequestBody MedicoDto medicoDTO) {
-		MedicoDto createdMedico = medicoService.save(medicoDTO);
+	public ResponseEntity<MedicoDto> createMedico(@RequestBody MedicoDto medicoDto) {
+		MedicoDto createdMedico = medicoService.save(medicoDto);
 		return ResponseEntity.ok(createdMedico);
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<MedicoDto> updateMedico(@PathVariable Long id, @RequestBody MedicoDto medicoDTO) {
-		medicoDTO.setId(id);
-		MedicoDto updatedMedico = medicoService.save(medicoDTO);
+	public ResponseEntity<MedicoDto> updateMedico(@PathVariable Long id, @RequestBody MedicoDto medicoDto) {
+		medicoDto.setId(id);
+		MedicoDto updatedMedico = medicoService.save(medicoDto);
 		return ResponseEntity.ok(updatedMedico);
 	}
 
